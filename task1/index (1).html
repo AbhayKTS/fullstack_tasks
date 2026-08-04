@@ -1,0 +1,180 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body><Div style="display:flex; align-items:center; justify-content:center; height:100vh;box-shadow: 0px 0px 10px black;">
+    <div style="border:1px solid black;flex-direction:column; display:flex;align-items:center;justify-content:center; width:400px; height:400px">
+        <h1 style="margin-top: 10px; margin-bottom: 10px;  text-align:center">Login</h1>
+        <form style="display:flex; flex-direction:column; align-items:center; justify-content:center">
+            <label for="username">Username</label>   
+            <input type="text" placeholder="Username" style="margin-bottom: 10px;">
+            <label for="password">password</label>
+            <input type="password" placeholder="Password" style="margin-bottom: 10px;">
+            <button type="submit">Submit</button>
+
+    </div>
+    </div>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            background-color: white;
+            padding: 40px;
+            width: 400px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 16px;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: #007bff;
+        }
+
+        .remember {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+        }
+
+        .forgot {
+            text-align: right;
+            font-size: 14px;
+        }
+
+        .forgot a {
+            text-decoration: none;
+            color: #007bff;
+        }
+
+        .forgot a:hover {
+            text-decoration: underline;
+        }
+
+        button {
+            padding: 12px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        p {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        p a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        p a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Login</h1>
+
+        <form>
+
+            <label for="username">Username</label>
+            <input
+                type="text"
+                id="username"
+                name="username"
+                placeholder="Enter your username"
+                required
+            >
+
+            <label for="password">Password</label>
+            <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Enter your password"
+                required
+            >
+
+            <div class="remember">
+                <input type="checkbox" id="remember">
+                <label for="remember">Remember Me</label>
+            </div>
+
+            <div class="forgot">
+                <a href="#">Forgot Password?</a>
+            </div>
+
+            <button type="submit">Login</button>
+
+        </form>
+
+        <p>
+            Don't have an account?
+            <a href="#">Sign Up</a>
+        </p>
+
+    </div>
+
+</body>
+</html>
