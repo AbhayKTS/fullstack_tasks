@@ -11,57 +11,37 @@
             padding: 20px;
             background-color: #f0f0f0;
         }
-
         .grid-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            grid-template-areas:
-                "box1 box1 box2"
-                "box1 box1 box3"
-                "box3 box4 box5"
-                "box6 box7 box8"
-                "box9 box9 box9"
-                ;
-        }
-        @media (max-width: 768px) {
-            .grid-container {
-                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-                grid-template-areas:
-                    "box1 box1 box2"
-                    "box2 box3 box3"
-                    "box4 box5 box5"
-                    "box6 box7 box7"
-                    "box8 box9 box9";
-            }
+            height: 100vh;
         }
 
         .grid-box {
             background-color: #4CAF50;
             color: white;
-            padding: 40px 20px;
             text-align: center;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
+            font-weight: 900;
+            height: 150px;
+            width: 150px;
         }
 
-        .grid-box:hover {
-            transform: translateY(-5px);
+        #box1{
+            position: fixed;
+            top: 300px;
+            left: 700px;
         }
     </style>
 </head>
 <body>
     <div class="grid-container">
-        <div class="grid-box">Box 1</div>
-        <div class="grid-box">Box 2</div>
-        <div class="grid-box">Box 3</div>
-        <div class="grid-box">Box 4</div>
-        <div class="grid-box">Box 5</div>
-        <div class="grid-box">Box 6</div>
-        <div class="grid-box">Box 7</div>
-        <div class="grid-box">Box 8</div>
-        <div class="grid-box">Box 9</div>
+        <div class="grid-box" id="box1" style="background-color: #f0c60a;">Box 1</div>
+        <div class="grid-box" style="background-color: #f00505;">Box 2</div>
+        <div class="grid-box" style="background-color: #00e1ff;">Box 3</div>
+        <div class="grid-box" style="background-color: #4CAF50;">Box 4</div>
+        <div class="grid-box" style="background-color: #001b01;">Box 5</div>
+        <div class="grid-box" style="background-color: #0011ff;">Box 6</div>
+        <div class="grid-box" style="background-color: #7a06b4;">Box 7</div>
+        <div class="grid-box" style="background-color: #740355;">Box 8</div>
+        <div class="grid-box" style="background-color: #6c022d;">Box 9</div>
     </div>
 </body>
 </html>
