@@ -1,70 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grid Box Example</title>
+    <title>Naruto Characters</title>
+
     <style>
+
         body {
-            font-family: Arial, sans-serif;
+            background-color: #111;
             margin: 0;
-            padding: 20px;
-            background-color: #2e023a;
         }
-        /*.grid-container {
-            height: 100vh;
+
+        .box {
+            width: 700px;
+            height: 500px;
+            margin: 80px auto;
+
+            position: sticky;
+            top: 10%;
+
+            background-size: cover;
+            background-position: center;
+
+            border: 8px solid;
+            border-image: linear-gradient(
+                45deg,
+                black,
+                white,
+                silver,
+                gold
+            ) 1;
         }
-*/
-        .grid-box {
-            width: 100%;
-            height: 990px;
-            position: relative;
-            overflow: hidden;
-            text-align: center;
-            text-transform: uppercase;
+
+        .box h1 {
             color: white;
-            font-weight: 900;
+            text-align: center;
+            font-size: 70px;
+            padding-top: 30px;
+
+            text-shadow: 5px 5px 10px black;
         }
 
-        .grid-box video {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
+        .box1 {
+            background-image: url("https://cdn.wallpapersafari.com/84/67/c4pd76U.jpg");
         }
 
-        .overlay-text {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: #fff;
-            font-size: 48px;
-            font-weight: 900;
-            letter-spacing: 2px;
-            text-shadow: 0 2px 8px rgba(0,0,0,0.7);
-            pointer-events: none;
+        .box2 {
+            background-image: url("https://www.coolkatana.com/cdn/shop/articles/Sasuke_Uchiha_Sword_of_Kusanagi_Lightning_Blade_Collector_s_Guide_00caf689-4336-4924-b99a-2931cc6eaa5e.jpg?v=1785199523");
         }
 
+        .box3 {
+            background-image: url("https://images.wallpapersden.com/image/download/itachi-uchiha-hd-naruto-art_bWVta2qUmZqaraWkpJRmZW1lrWZuZ2U.jpg");
+        }
+
+        .box4 {
+            background-image: url("https://i.pinimg.com/originals/d3/87/c1/d387c198f2a5f81c31af513c4be8b45a.jpg");
+        }
+
+        .box5 {
+            background-image: url("https://www.baltana.com/files/wallpapers-31/Anime-Kakashi-High-Definition-Wallpaper-105645.jpg");
+        }
+
+        .box6 {
+            background-image: url("https://w0.peakpx.com/wallpaper/985/461/HD-wallpaper-minato-namikaze-anime-hokage-manga-naruto-shippuden-ninja-yondaime.jpg");
+        }
+
+        .box7 {
+            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWfbECHJKzhV2y3Wod2rwOVnsWLKNwioX811UBEEAa4A&s");
+        }
+
+        .box8 {
+            background-image: url("https://wallpapers.com/images/hd/nagatocomo-pain-de-naruto-shippuden-mdu7f1b4d8jf5awy.jpg");
+        }
+
+        .box9 {
+            background: radial-gradient(
+                circle,
+                orange,
+                red,
+                purple,
+                black
+            );
+        }
 
     </style>
 </head>
+
 <body>
-    <div class="grid-container">
-        <div class="grid-box" id="box1">
-            <video autoplay muted loop playsinline>
-                    <source src="assets\Firefly in this video use the frame i gave and just let the person unsheath the sword 14101.mp4" type="video/mp4">
-            </video>
-            <div class="overlay-text">Northern Blade</div>
+
+    <div class="container">
+
+        <div class="box box1">
+            <h1>NARUTO</h1>
         </div>
-        <div class="grid-box" id="box2" style="background-color: #f00505;">Box 2</div>
-        <div class="grid-box" style="background-color: #00e1ff;">Box 3</div>
-        <div class="grid-box" style="background-color: #4CAF50;">Box 4</div>
-        <div class="grid-box" style="background-color: #001b01;">Box 5</div>
-        <div class="grid-box" style="background-color: #0011ff;">Box 6</div>
-        <div class="grid-box" style="background-color: #7a06b4;">Box 7</div>
-        <div class="grid-box" style="background-color: #740355;">Box 8</div>
-        <div class="grid-box" style="background-color: #6c022d;">Box 9</div>
+
+        <div class="box box2">
+            <h1>SASUKE</h1>
+        </div>
+
+        <div class="box box3">
+            <h1>ITACHI</h1>
+        </div>
+
+        <div class="box box4">
+            <h1>MADARA</h1>
+        </div>
+
+        <div class="box box5">
+            <h1>KAKASHI</h1>
+        </div>
+
+        <div class="box box6">
+            <h1>MINATO</h1>
+        </div>
+
+        <div class="box box7">
+            <h1>OBITO</h1>
+        </div>
+
+        <div class="box box8">
+            <h1>PAIN</h1>
+        </div>
+
+        <div class="box box9">
+            <h1>CHAKRA</h1>
+        </div>
+
     </div>
+
 </body>
+
 </html>
