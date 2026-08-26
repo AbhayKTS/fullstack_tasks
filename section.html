@@ -69,6 +69,21 @@
             box-shadow: 1px 1px 5px black;
             accent-color:brown;
         }
+        input:in-range{
+            background: cyan;
+        }
+        input:out-of-range{
+            background: red;
+        }
+        input:read-only{
+            border-width: 0px;
+            box-shadow: 0 0 0 transparent;
+            color:white;
+            background:gray;
+        }
+        input:placeholder-shown{
+            background-color: yellow;
+        }
         li:nth-child(3n){
             background-color: yellow;
         }
@@ -88,6 +103,9 @@
     <a href="#2">link</a>
     <input type="checkbox" checked/>
     <input type="email" placeholder="enter your email">
+    <input type="number" min="1" max="100">
+    
+    <input type="text" value="mr." readonly>
     <input type="text" placeholder="enter your name" required>
     <br>
     <button type="submit">submit</button>
