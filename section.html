@@ -31,8 +31,49 @@
         p{
             color: red;
         }
+        button:hover{
+            background-color: black;
+            color:white;
+        }
+        /*button:active{
+            background-color: red;
+        }*/
+        button:focus{
+            background-color: green;
+        }
+        a:link{
+            text-decoration: none;
+            color:black;
+        }
+        a:visited{
+            color:white;
+        }
+        input{
+            border-width: 0px 0px 3px 0px;
+            border-color: black;
+            display: block;
+            margin-top:3%;
+            font-size:25px;
+        }
+        input:required{
+            border-color: red;
+        }
+        input:invalid{
+            background-color: red;
+            border-color: red;
+        }
+        input:valid{
+            border-color: green;
+        }
+        input:checked{
+            box-shadow: 1px 1px 5px black;
+            accent-color:brown;
+        }
+        li:nth-child(3n){
+            background-color: yellow;
+        }
     </style>
-</head>
+</head> 
 <body>
     <section>
         <h2>Heading</h2>
@@ -43,7 +84,21 @@
         </div>
     </section>
     <p class="para" id="mypara"> hello world </p>
-
-    
+    <button>click me!</button>
+    <a href="#2">link</a>
+    <input type="checkbox" checked/>
+    <input type="email" placeholder="enter your email">
+    <input type="text" placeholder="enter your name" required>
+    <br>
+    <button type="submit">submit</button>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+    </ul>
 </body>
 </html>
