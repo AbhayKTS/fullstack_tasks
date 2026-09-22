@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme{
+    --color-coffee: red;
+}
+
+.heading{
+    @apply min-h-screen bg-white dark:bg-gray-950 flex items-center justify-center p-4 transition-colors duration-300; 
+}

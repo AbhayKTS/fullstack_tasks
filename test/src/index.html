@@ -5,9 +5,88 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Document</title>
+    <link rel="stylesheet" href="../dist/index.css" />
+    <script>
+        // On page load, check theme preference and apply it
+        document.documentElement.classList.toggle(
+            "dark",
+            localStorage.theme === "dark" ||
+                (!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches),
+        );
+    </script>
 </head>
-<body>
-    
+<body class="heading">
+    <div class="mx-auto w-full max-w-4xl space-y-8">
+        <!-- Dark Mode Toggle Button -->
+        <div class="flex justify-end px-4 mb-8">
+            <button
+                id="theme-toggle"
+                class="rounded-lg bg-gray-200 dark:bg-gray-800 px-4 py-2 font-medium text-gray-900 dark:text-white transition-colors hover:bg-gray-300 dark:hover:bg-gray-700 shadow-md dark:shadow-lg"
+                aria-label="Toggle dark mode"
+            >
+                <span id="theme-icon" class="inline-block">🌙</span>
+                <span id="theme-text" class="ml-2 inline-block">Dark</span>
+            </button>
+        </div>
+
+        <!-- Card Component with Dark Mode Support -->
+        <div class="mx-auto w-full max-w-4xl overflow-hidden rounded-lg bg-white dark:bg-gray-800 shadow-[0_20px_60px_rgba(15,23,42,0.35)] dark:shadow-[0_20px_60px_rgba(0,0,0,0.9)] transition-colors duration-300">
+            <div class="md:flex">
+                <div class="md:shrink-0 md:w-72">
+                    <img
+                        class="h-60 w-full object-cover md:h-full md:w-72"
+                        src="../public/asset/building.jpg"
+                        alt="Modern building architecture"
+                    />
+                </div>
+                <div class="p-6 md:p-8 lg:p-10">
+                    <div class="text-base font-semibold text-[#4f46e5] dark:text-[#818cf8]">Company retreats</div>
+                    <a href="#" class="mt-4 block text-2xl font-semibold leading-tight text-[#111827] dark:text-white hover:underline">
+                        Incredible accommodation for your team
+                    </a>
+                    <p class="mt-4 max-w-2xl text-lg leading-8 text-[#6b7280] dark:text-gray-400">
+                        Looking to take your team away on a retreat to enjoy awesome food and take in some sunshine? We have a list of
+                        places to do just that.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const themeToggle = document.getElementById("theme-toggle");
+        const themeIcon = document.getElementById("theme-icon");
+        const themeText = document.getElementById("theme-text");
+        const html = document.documentElement;
+
+        // Update button display based on current theme
+        function updateThemeButton() {
+            if (html.classList.contains("dark")) {
+                themeIcon.textContent = "☀️";
+                themeText.textContent = "Light";
+            } else {
+                themeIcon.textContent = "🌙";
+                themeText.textContent = "Dark";
+            }
+        }
+
+        // Handle theme toggle
+        themeToggle.addEventListener("click", () => {
+            html.classList.toggle("dark");
+
+            // Save preference to localStorage
+            if (html.classList.contains("dark")) {
+                localStorage.theme = "dark";
+            } else {
+                localStorage.theme = "light";
+            }
+
+            updateThemeButton();
+        });
+
+        // Initialize button display
+        updateThemeButton();
+    </script>
 </body>
 </html>
 
