@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>ShopKart | Product Listing</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="vivatask2.css">
+</head>
+<body>
+	<div class="page-shell">
+		<header class="site-header">
+			<div class="topbar">
+				<a class="brand" href="#top" aria-label="ShopKart home">
+					<span class="brand-mark" aria-hidden="true">S</span>
+					<span>ShopKart</span>
+				</a>
+
+				<label class="searchbar" for="search">
+					<span class="search-icon" aria-hidden="true">⌕</span>
+					<input id="search" type="search" placeholder="Search for products..." aria-label="Search products">
+				</label>
+
+				<nav class="header-actions" aria-label="Primary">
+					<a href="#filters">Filters</a>
+					<a href="#products">Products</a>
+					<a class="cart-link" href="#cart" aria-label="Cart">
+						Cart
+						<span class="cart-count" data-cart-count>0</span>
+					</a>
+					<button class="menu-button" type="button" aria-label="Open menu">
+						<span></span>
+					</button>
+				</nav>
+			</div>
+
+			<div class="breadcrumb-row">
+				<div class="breadcrumbs" aria-label="Breadcrumb">
+					<a href="#top">Electronics</a>
+					<span>/</span>
+					<a href="#products">Laptops</a>
+				</div>
+				<p class="results-count">Showing 8 results</p>
+			</div>
+		</header>
+
+		<main class="catalog-layout" id="top">
+			<aside class="filters-panel" id="filters" aria-label="Product filters">
+				<div class="panel-heading">
+					<h2>Filters</h2>
+					<span>Refine your search</span>
+				</div>
+
+				<section class="filter-group" data-filter="category">
+					<h3>Category</h3>
+					<label><input type="checkbox" value="laptops" checked> Laptops</label>
+					<label><input type="checkbox" value="tablets" checked> Tablets</label>
+					<label><input type="checkbox" value="desktops" checked> Desktops</label>
+					<label><input type="checkbox" value="accessories" checked> Accessories</label>
+				</section>
+
+				<section class="filter-group" data-filter="price">
+					<h3>Price Range</h3>
+					<label><input type="radio" name="price" value="70000-90000"> ₹70,000 - ₹90,000</label>
+					<label><input type="radio" name="price" value="90000-120000"> ₹90,000 - ₹1,20,000</label>
+					<label><input type="radio" name="price" value="120000-150000"> ₹1,20,000 - ₹1,50,000</label>
+					<label><input type="radio" name="price" value="150000+"> Above ₹1,50,000</label>
+				</section>
+
+				<section class="filter-group" data-filter="brand">
+					<h3>Brand</h3>
+					<label><input type="checkbox" value="dell" checked> Dell</label>
+					<label><input type="checkbox" value="hp" checked> HP</label>
+					<label><input type="checkbox" value="lenovo" checked> Lenovo</label>
+					<label><input type="checkbox" value="asus" checked> Asus</label>
+				</section>
+
+				<button class="apply-button" type="button">Apply Filters</button>
+			</aside>
+
+			<section class="catalog-content" id="products">
+				<div class="toolbar">
+					<div>
+						<p class="eyebrow">Laptops</p>
+						<h1>Find the right laptop for work, play, and everything in between.</h1>
+					</div>
+
+					<label class="sort-control">
+						<span>Sort by</span>
+						<select aria-label="Sort products">
+							<option>Popularity</option>
+							<option>Price: Low to High</option>
+							<option>Price: High to Low</option>
+						</select>
+					</label>
+				</div>
+
+				<div class="mobile-filterbar" aria-label="Quick filters">
+					<button type="button" data-mobile-action="filters">Filters</button>
+					<button type="button" data-mobile-action="sort">Sort</button>
+				</div>
+
+				<div class="product-grid">
+					<article class="product-card" data-title="Dell Inspiron 15" data-category="laptops" data-brand="dell" data-price="45990" data-rating="4.8" data-popularity="2100">
+						<div class="product-media">
+							<span class="badge sale">Sale</span>
+							<button class="wish-button" type="button" aria-label="Add to wishlist" aria-pressed="false">♡</button>
+							<img src="assets/download%20(25).jpg" alt="Dell Inspiron 15 laptop">
+						</div>
+						<div class="product-body">
+							<p class="product-category">Category: Laptops</p>
+							<h2>Dell Inspiron 15</h2>
+							<div class="rating">★★★★★ <span>4.8 (2.1K)</span></div>
+							<div class="price-row">
+								<div>
+									<strong class="price">₹45,990</strong>
+									<span class="old-price">₹56,990</span>
+								</div>
+							</div>
+							<button class="cart-button" type="button">Add to Cart</button>
+						</div>
+					</article>
+
+					<article class="product-card" data-title="HP Pavilion" data-category="laptops" data-brand="hp" data-price="52990" data-rating="4.6" data-popularity="1900">
+						<div class="product-media">
+							<span class="badge new">New</span>
+							<button class="wish-button" type="button" aria-label="Add to wishlist" aria-pressed="false">♡</button>
+							<img src="assets/download%20(26).jpg" alt="HP Pavilion laptop">
+						</div>
+						<div class="product-body">
+							<p class="product-category">Category: Laptops</p>
+							<h2>HP Pavilion</h2>
+							<div class="rating">★★★★☆ <span>4.6 (1.9K)</span></div>
+							<div class="price-row">
+								<div>
+									<strong class="price">₹52,990</strong>
+									<span class="old-price">₹62,990</span>
+								</div>
+							</div>
+							<button class="cart-button" type="button">Add to Cart</button>
+						</div>
+					</article>
+
+					<article class="product-card" data-title="Lenovo IdeaPad" data-category="laptops" data-brand="lenovo" data-price="38990" data-rating="4.9" data-popularity="1500">
+						<div class="product-media">
+							<span class="badge sale">Sale</span>
+							<button class="wish-button" type="button" aria-label="Add to wishlist" aria-pressed="false">♡</button>
+							<img src="assets/download%20(27).jpg" alt="Lenovo IdeaPad laptop">
+						</div>
+						<div class="product-body">
+							<p class="product-category">Category: Laptops</p>
+							<h2>Lenovo IdeaPad</h2>
+							<div class="rating">★★★★★ <span>4.9 (1.5K)</span></div>
+							<div class="price-row">
+								<div>
+									<strong class="price">₹38,990</strong>
+									<span class="old-price">₹47,990</span>
+								</div>
+							</div>
+							<button class="cart-button" type="button">Add to Cart</button>
+						</div>
+					</article>
+
+					<article class="product-card" data-title="ASUS Vivobook" data-category="laptops" data-brand="asus" data-price="41990" data-rating="4.5" data-popularity="1200">
+						<div class="product-media">
+							<span class="badge new">New</span>
+							<button class="wish-button" type="button" aria-label="Add to wishlist" aria-pressed="false">♡</button>
+							<img src="assets/download%20(28).jpg" alt="ASUS Vivobook laptop">
+						</div>
+						<div class="product-body">
+							<p class="product-category">Category: Laptops</p>
+							<h2>ASUS Vivobook</h2>
+							<div class="rating">★★★★☆ <span>4.5 (1.2K)</span></div>
+							<div class="price-row">
+								<div>
+									<strong class="price">₹41,990</strong>
+									<span class="old-price">₹49,990</span>
+								</div>
+							</div>
+							<button class="cart-button" type="button">Add to Cart</button>
+						</div>
+					</article>
+
+					<article class="product-card" data-title="Dell XPS 13" data-category="laptops" data-brand="dell" data-price="89990" data-rating="4.8" data-popularity="980">
+						<div class="product-media">
+							<span class="badge sale">Sale</span>
+							<button class="wish-button" type="button" aria-label="Add to wishlist" aria-pressed="false">♡</button>
+							<img src="assets/LOTNB.jpg" alt="Dell XPS 13 laptop">
+						</div>
+						<div class="product-body">
+							<p class="product-category">Category: Laptops</p>
+							<h2>Dell XPS 13</h2>
+							<div class="rating">★★★★★ <span>4.8 (980)</span></div>
+							<div class="price-row">
+								<div>
+									<strong class="price">₹89,990</strong>
+									<span class="old-price">₹99,990</span>
+								</div>
+							</div>
+							<button class="cart-button" type="button">Add to Cart</button>
+						</div>
+					</article>
+
+					<article class="product-card" data-title="MacBook Air M2" data-category="laptops" data-brand="apple" data-price="99990" data-rating="4.7" data-popularity="1100">
+						<div class="product-media">
+							<span class="badge new">New</span>
+							<button class="wish-button" type="button" aria-label="Add to wishlist" aria-pressed="false">♡</button>
+							<img src="assets/LNB%20(144).jpg" alt="MacBook Air M2 laptop">
+						</div>
+						<div class="product-body">
+							<p class="product-category">Category: Laptops</p>
+							<h2>MacBook Air M2</h2>
+							<div class="rating">★★★★☆ <span>4.7 (1.1K)</span></div>
+							<div class="price-row">
+								<div>
+									<strong class="price">₹99,990</strong>
+									<span class="old-price">₹1,09,990</span>
+								</div>
+							</div>
+							<button class="cart-button" type="button">Add to Cart</button>
+						</div>
+					</article>
+
+					<article class="product-card" data-title="HP Omen" data-category="laptops" data-brand="hp" data-price="102990" data-rating="4.9" data-popularity="1700">
+						<div class="product-media">
+							<span class="badge sale">Sale</span>
+							<button class="wish-button" type="button" aria-label="Add to wishlist" aria-pressed="false">♡</button>
+							<img src="assets/Moyong%20Ul%20Cheon.jpg" alt="HP Omen laptop">
+						</div>
+						<div class="product-body">
+							<p class="product-category">Category: Laptops</p>
+							<h2>HP Omen</h2>
+							<div class="rating">★★★★★ <span>4.9 (1.7K)</span></div>
+							<div class="price-row">
+								<div>
+									<strong class="price">₹1,02,990</strong>
+									<span class="old-price">₹1,18,990</span>
+								</div>
+							</div>
+							<button class="cart-button" type="button">Add to Cart</button>
+						</div>
+					</article>
+
+					<article class="product-card" data-title="ASUS TUF Gaming" data-category="laptops" data-brand="asus" data-price="112990" data-rating="4.6" data-popularity="890">
+						<div class="product-media">
+							<span class="badge new">New</span>
+							<button class="wish-button" type="button" aria-label="Add to wishlist" aria-pressed="false">♡</button>
+							<img src="assets/image.png" alt="ASUS TUF Gaming laptop">
+						</div>
+						<div class="product-body">
+							<p class="product-category">Category: Laptops</p>
+							<h2>ASUS TUF Gaming</h2>
+							<div class="rating">★★★★☆ <span>4.6 (890)</span></div>
+							<div class="price-row">
+								<div>
+									<strong class="price">₹1,12,990</strong>
+									<span class="old-price">₹1,29,990</span>
+								</div>
+							</div>
+							<button class="cart-button" type="button">Add to Cart</button>
+						</div>
+					</article>
+				</div>
+			</section>
+		</main>
+		<section class="cart-panel" id="cart" aria-label="Cart summary">
+			<div class="cart-panel-inner">
+				<strong>Cart</strong>
+				<span data-cart-summary>No items added yet.</span>
+			</div>
+		</section>
+	</div>
+
+	<script>
+		const page = document.documentElement;
+		const menuButton = document.querySelector('.menu-button');
+		const cartCount = document.querySelector('[data-cart-count]');
+		const cartSummary = document.querySelector('[data-cart-summary]');
+		const searchInput = document.getElementById('search');
+		const sortSelect = document.querySelector('.sort-control select');
+		const applyButton = document.querySelector('.apply-button');
+		const mobileButtons = document.querySelectorAll('[data-mobile-action]');
+		const productGrid = document.querySelector('.product-grid');
+		const cards = Array.from(document.querySelectorAll('.product-card'));
+		const filters = {
+				category: Array.from(document.querySelectorAll('[data-filter="category"] input[type="checkbox"]')),
+				price: Array.from(document.querySelectorAll('[data-filter="price"] input[type="radio"]')),
+				brand: Array.from(document.querySelectorAll('[data-filter="brand"] input[type="checkbox"]'))
+		};
+		let cartTotal = 0;
+
+		const formatCurrency = (value) => `₹${Number(value).toLocaleString('en-IN')}`;
+
+		const getActiveFilters = () => {
+			const activeCategories = filters.category.filter((input) => input.checked).map((input) => input.value);
+			const activeBrands = filters.brand.filter((input) => input.checked).map((input) => input.value);
+				const activePrice = filters.price.find((input) => input.checked)?.value || null;
+			const search = searchInput.value.trim().toLowerCase();
+
+			return { activeCategories, activeBrands, activePrice, search };
+		};
+
+		const matchesPrice = (price, range) => {
+			const priceValue = Number(price);
+				if (!range) {
+					return true;
+				}
+
+				switch (range) {
+				case '70000-90000':
+					return priceValue >= 70000 && priceValue <= 90000;
+				case '90000-120000':
+					return priceValue >= 90000 && priceValue <= 120000;
+				case '120000-150000':
+					return priceValue > 120000 && priceValue <= 150000;
+				case '150000+':
+					return priceValue > 150000;
+				default:
+					return true;
+			}
+		};
+
+		const applyFilters = () => {
+			const { activeCategories, activeBrands, activePrice, search } = getActiveFilters();
+			let visibleCount = 0;
+
+			cards.forEach((card) => {
+				const category = card.dataset.category;
+				const brand = card.dataset.brand;
+				const title = card.dataset.title.toLowerCase();
+				const matchesSearch = !search || title.includes(search) || brand.includes(search) || category.includes(search);
+				const matchesCategory = activeCategories.length === 0 || activeCategories.includes(category);
+				const matchesBrand = activeBrands.length === 0 || activeBrands.includes(brand);
+				const matchesPriceRange = matchesPrice(card.dataset.price, activePrice);
+				const isVisible = matchesSearch && matchesCategory && matchesBrand && matchesPriceRange;
+
+				card.hidden = !isVisible;
+				if (isVisible) {
+					visibleCount += 1;
+				}
+			});
+
+			document.querySelector('.results-count').textContent = `Showing ${visibleCount} results`;
+			return visibleCount;
+		};
+
+		const sortCards = () => {
+			const sortMode = sortSelect.value;
+			const sorted = [...cards].sort((left, right) => {
+				if (sortMode === 'Price: Low to High') {
+					return Number(left.dataset.price) - Number(right.dataset.price);
+				}
+
+				if (sortMode === 'Price: High to Low') {
+					return Number(right.dataset.price) - Number(left.dataset.price);
+				}
+
+				return Number(right.dataset.popularity) - Number(left.dataset.popularity);
+			});
+
+			sorted.forEach((card) => productGrid.appendChild(card));
+		};
+
+		const updateCartSummary = () => {
+			cartCount.textContent = String(cartTotal);
+			cartSummary.textContent = cartTotal === 0 ? 'No items added yet.' : `${cartTotal} item${cartTotal === 1 ? '' : 's'} in cart.`;
+		};
+
+		menuButton.addEventListener('click', () => {
+			page.classList.toggle('nav-open');
+		});
+
+		mobileButtons.forEach((button) => {
+			button.addEventListener('click', () => {
+				if (button.dataset.mobileAction === 'filters') {
+					document.getElementById('filters').scrollIntoView({ behavior: 'smooth', block: 'start' });
+				} else {
+					sortSelect.focus();
+				}
+			});
+		});
+
+		applyButton.addEventListener('click', applyFilters);
+		searchInput.addEventListener('input', applyFilters);
+		sortSelect.addEventListener('change', () => {
+			sortCards();
+			applyFilters();
+		});
+
+		document.querySelectorAll('.wish-button').forEach((button) => {
+			button.addEventListener('click', () => {
+				const pressed = button.getAttribute('aria-pressed') === 'true';
+				button.setAttribute('aria-pressed', String(!pressed));
+				button.textContent = pressed ? '♡' : '♥';
+				button.classList.toggle('is-active', !pressed);
+			});
+		});
+
+		document.querySelectorAll('.cart-button').forEach((button) => {
+			button.addEventListener('click', () => {
+				const added = button.dataset.state === 'added';
+				button.dataset.state = added ? 'idle' : 'added';
+				button.textContent = added ? 'Add to Cart' : 'Added';
+				cartTotal += added ? -1 : 1;
+				updateCartSummary();
+			});
+		});
+
+		updateCartSummary();
+		applyFilters();
+	</script>
+</body>
+</html>
