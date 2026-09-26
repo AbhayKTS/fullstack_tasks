@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Task 4 - Responsive University Event Website</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="vivatask4.css">
+</head>
+<body>
+	<header class="site-header">
+		<div class="container nav-shell">
+			<a class="brand" href="#top" aria-label="GLA University home">
+				<img src="assets/GLA_University_logo.png" alt="GLA University logo" class="brand__logo">
+				<span>GLA University</span>
+			</a>
+
+			<nav class="desktop-nav" aria-label="Primary navigation">
+				<a href="#top">Home</a>
+				<a href="#details">About</a>
+				<a href="#speakers">Events</a>
+				<a href="#schedule">Contact</a>
+			</nav>
+
+			<div class="desktop-actions">
+				<button class="btn btn--theme btn--small theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Switch to dark mode">
+					<span class="theme-toggle__icon theme-toggle__icon--sun" aria-hidden="true">
+						<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+							<circle cx="12" cy="12" r="4.5"></circle>
+							<path d="M12 2v2.5"></path>
+							<path d="M12 19.5V22"></path>
+							<path d="m4.93 4.93 1.77 1.77"></path>
+							<path d="m17.3 17.3 1.77 1.77"></path>
+							<path d="M2 12h2.5"></path>
+							<path d="M19.5 12H22"></path>
+							<path d="m4.93 19.07 1.77-1.77"></path>
+							<path d="m17.3 6.7 1.77-1.77"></path>
+						</svg>
+					</span>
+					<span class="theme-toggle__icon theme-toggle__icon--moon" aria-hidden="true">
+						<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+							<path d="M21 12.8A8.5 8.5 0 1 1 11.2 3 7 7 0 1 0 21 12.8Z"></path>
+						</svg>
+					</span>
+					<span class="theme-toggle__label" aria-hidden="true">Theme</span>
+				</button>
+				<a class="btn btn--nav btn--small" href="#details">Register Now</a>
+			</div>
+
+			<details class="mobile-menu">
+				<summary aria-label="Open menu">
+					<span></span>
+					<span></span>
+					<span></span>
+				</summary>
+				<div class="mobile-menu__panel" role="navigation" aria-label="Mobile navigation">
+					<a href="#top">Home</a>
+					<a href="#details">About</a>
+					<a href="#speakers">Events</a>
+					<a href="#schedule">Contact</a>
+					<button class="btn btn--theme theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Switch to dark mode">
+						<span class="theme-toggle__icon theme-toggle__icon--sun" aria-hidden="true">
+							<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+								<circle cx="12" cy="12" r="4.5"></circle>
+								<path d="M12 2v2.5"></path>
+								<path d="M12 19.5V22"></path>
+								<path d="m4.93 4.93 1.77 1.77"></path>
+								<path d="m17.3 17.3 1.77 1.77"></path>
+								<path d="M2 12h2.5"></path>
+								<path d="M19.5 12H22"></path>
+								<path d="m4.93 19.07 1.77-1.77"></path>
+								<path d="m17.3 6.7 1.77-1.77"></path>
+							</svg>
+						</span>
+						<span class="theme-toggle__icon theme-toggle__icon--moon" aria-hidden="true">
+							<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+								<path d="M21 12.8A8.5 8.5 0 1 1 11.2 3 7 7 0 1 0 21 12.8Z"></path>
+							</svg>
+						</span>
+						<span class="theme-toggle__label" aria-hidden="true">Theme</span>
+					</button>
+					<a class="btn btn--primary" href="#details">Register Now</a>
+				</div>
+			</details>
+		</div>
+	</header>
+
+	<main id="top">
+		<section class="hero" aria-labelledby="hero-title">
+			<div class="hero__content">
+				<p class="eyebrow">Tech • Learn • Connect</p>
+				<h1 id="hero-title">Tech Summit <span>2026</span></h1>
+				<p class="hero__subtitle">Innovating the Future of Technology</p>
+				<div class="hero__actions">
+					<a class="btn btn--primary" href="#details">Register Now</a>
+					<a class="btn btn--ghost" href="#schedule">View Schedule</a>
+				</div>
+			</div>
+		</section>
+
+		<section class="container content-section" id="details" aria-labelledby="details-title">
+			<div class="section-head">
+				<h2 id="details-title">Event Details</h2>
+				<p>Everything you need to know before joining the summit.</p>
+			</div>
+
+			<div class="details-grid">
+				<article class="info-card">
+					<div class="info-card__icon" aria-hidden="true">
+						<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+							<rect x="3" y="4" width="18" height="18" rx="4"></rect>
+							<path d="M8 2v4"></path>
+							<path d="M16 2v4"></path>
+							<path d="M3 10h18"></path>
+						</svg>
+					</div>
+					<div>
+						<h3>Date</h3>
+						<p>15 Oct 2026</p>
+						<span>Friday</span>
+					</div>
+				</article>
+
+				<article class="info-card">
+					<div class="info-card__icon" aria-hidden="true">
+						<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+							<path d="M12 21s6-5.2 6-11a6 6 0 1 0-12 0c0 5.8 6 11 6 11Z"></path>
+							<circle cx="12" cy="10" r="2.2"></circle>
+						</svg>
+					</div>
+					<div>
+						<h3>Venue</h3>
+						<p>GLA University</p>
+						<span>Mathura</span>
+					</div>
+				</article>
+
+				<article class="info-card">
+					<div class="info-card__icon" aria-hidden="true">
+						<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+							<path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+							<circle cx="9" cy="7" r="4"></circle>
+							<path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+							<path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+						</svg>
+					</div>
+					<div>
+						<h3>Speakers</h3>
+						<p>25+</p>
+						<span>Industry Experts</span>
+					</div>
+				</article>
+			</div>
+		</section>
+
+		<section class="container content-section" id="speakers" aria-labelledby="speakers-title">
+			<div class="section-head section-head--split">
+				<div>
+					<h2 id="speakers-title">Featured Speakers</h2>
+					<p>Leaders sharing practical ideas, current research, and future-ready skills.</p>
+				</div>
+				<a class="section-link" href="#schedule">View all</a>
+			</div>
+
+			<div class="speaker-grid">
+				<article class="speaker-card">
+					<img src="assets/LNB%20(144).jpg" alt="Dr. Ananya Sharma" class="speaker-card__image">
+					<h3>Dr. Ananya Sharma</h3>
+					<p>AI Researcher</p>
+				</article>
+				<article class="speaker-card">
+					<img src="assets/LOTNB.jpg" alt="Rahul Mehta" class="speaker-card__image">
+					<h3>Rahul Mehta</h3>
+					<p>CTO, TechCorp</p>
+				</article>
+				<article class="speaker-card">
+					<img src="assets/Moyong%20Ul%20Cheon.jpg" alt="Priya Nair" class="speaker-card__image">
+					<h3>Priya Nair</h3>
+					<p>Product Lead</p>
+				</article>
+				<article class="speaker-card">
+					<img src="assets/Legend%20of%20the%20northern%20blade%20%F0%9F%92%99.jpg" alt="Vikram Singh" class="speaker-card__image">
+					<h3>Vikram Singh</h3>
+					<p>Cloud Architect</p>
+				</article>
+			</div>
+		</section>
+
+		<section class="container content-section" id="schedule" aria-labelledby="schedule-title">
+			<div class="section-head">
+				<h2 id="schedule-title">Event Schedule</h2>
+				<p>A compact run of the day to keep the summit moving smoothly.</p>
+			</div>
+
+			<div class="schedule-card" role="table" aria-label="Event schedule">
+				<div class="schedule-row schedule-row--head" role="row">
+					<div role="columnheader">Time</div>
+					<div role="columnheader">Session</div>
+				</div>
+				<div class="schedule-row" role="row">
+					<div role="cell">10:00</div>
+					<div role="cell">Opening Ceremony</div>
+				</div>
+				<div class="schedule-row" role="row">
+					<div role="cell">11:00</div>
+					<div role="cell">AI &amp; Future</div>
+				</div>
+				<div class="schedule-row" role="row">
+					<div role="cell">12:30</div>
+					<div role="cell">Lunch</div>
+				</div>
+				<div class="schedule-row" role="row">
+					<div role="cell">02:00</div>
+					<div role="cell">Cloud Computing</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<footer class="site-footer">
+		<div class="container">
+			<p>GLA University Tech Summit 2026</p>
+		</div>
+	</footer>
+
+	<script>
+		(function () {
+			const storageKey = 'vivatask4-theme';
+			const root = document.documentElement;
+			const toggles = Array.from(document.querySelectorAll('[data-theme-toggle]'));
+
+			function getStoredTheme() {
+				const storedTheme = localStorage.getItem(storageKey);
+				return storedTheme === 'dark' || storedTheme === 'light' ? storedTheme : 'light';
+			}
+
+			function applyTheme(theme) {
+				root.dataset.theme = theme;
+				toggles.forEach((toggle) => {
+					toggle.setAttribute('aria-pressed', String(theme === 'dark'));
+					toggle.setAttribute('aria-label', theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
+				});
+			}
+
+			applyTheme(getStoredTheme());
+
+			toggles.forEach((toggle) => {
+				toggle.addEventListener('click', () => {
+					const nextTheme = root.dataset.theme === 'dark' ? 'light' : 'dark';
+					localStorage.setItem(storageKey, nextTheme);
+					applyTheme(nextTheme);
+				});
+			});
+		})();
+	</script>
+</body>
+</html>
