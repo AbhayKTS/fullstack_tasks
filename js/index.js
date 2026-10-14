@@ -1,19 +1,24 @@
-let num=153;
-let sum=0;
-let t=num;
-let count=0;
-while(t>0){
-    count++;
-    t=Math.floor(t/10);
+function isArmstrong(n){
+    const num = Number(n);
+    if (!Number.isInteger(num) || num < 0) return false;
+
+    let sum=0;
+    let temp=num;
+    let digits=num.toString().length;
+    while(temp>0){
+        let d=temp%10;
+        sum+=Math.pow(d,digits);
+        temp=Math.floor(temp/10);
+    }
+    return sum===num;
 }
-t=num;
-while(t>0){
-    let d=t%10;
-    sum+=d**3;
-    t=Math.floor(t/10);
-}
-if (sum===num){
-    console.log("Armstrong number.");
-}else{
-    console.log("Nope");
+function checkandshow(){
+    let val=Number(document.getElementById("num").value);
+    if(isArmstrong(val)){
+        console.log("Armstrong");
+        document.getElementById("result").innerHTML=val+" is an Armstrong number";
+    }else{
+        console.log("Not Armstrong");
+        document.getElementById("result").innerHTML=val+" is not an Armstrong number";
+    }
 }
