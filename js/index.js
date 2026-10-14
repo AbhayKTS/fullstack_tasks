@@ -14,11 +14,14 @@ function isArmstrong(n){
 }
 function checkandshow(){
     let val=Number(document.getElementById("num").value);
+    let para=document.createElement("p");
     if(isArmstrong(val)){
+        para.innerHTML=val+" is <b style='color: green'>an Armstrong number</b>";
         console.log("Armstrong");
-        document.getElementById("result").innerHTML=val+" is an Armstrong number";
     }else{
+        para.innerHTML=val+" is <b style='color: red'>not an Armstrong number</b>";
         console.log("Not Armstrong");
-        document.getElementById("result").innerHTML=val+" is not an Armstrong number";
     }
+    document.getElementsByTagName("body")[0].append(para);
 }
+
