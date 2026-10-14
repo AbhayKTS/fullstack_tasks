@@ -1,12 +1,21 @@
+<!DOCTYPE html>
 <html>
-    <head>
-        <title>Armstrong Number Checker</title>
-        <script src="index.js"></script>
-    </head>
-    <body>
-        <h1>Armstrong Number Checker</h1>
-        <input type="number" id="num" placeholder="Enter a number">
-        <button onclick="checkandshow()">Check</button>
-        <p id="result"></p>
-    </body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie List CRUD</title>
+  </head>
+  <body>
+    <h1>Movie List</h1>
+
+    <form id="movieForm">
+      <input type="text" id="movieName" placeholder="Movie name" />
+      <input type="number" id="movieRating" placeholder="Rating" min="0" max="10" step="0.1" />
+      <button type="submit" id="submitMovie">Add Movie</button>
+    </form>
+
+    <ul id="movieList"></ul>
+
+    <script src="index.js"></script>
+  </body>
 </html>
