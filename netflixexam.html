@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Document</title>
+    <style>
+        * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        background-color: #111;
+        color: white;
+        font-family: Arial, sans-serif;
+        overflow-x: hidden;
+    }
+
+
+    /* ---------- HERO SECTION ---------- */
+
+    .midnight {
+        min-height: 300px;
+        padding: 40px 30px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        background: linear-gradient(
+            135deg,
+            #29252c,
+            #171b22,
+            #30202e
+        );
+    }
+
+    .midnight h1 {
+        margin-bottom: 10px;
+        font-size: 32px;
+    }
+
+    .midnight p {
+        max-width: 700px;
+        line-height: 1.5;
+    }
+
+
+    /* ---------- HERO BUTTONS ---------- */
+
+    .play {
+        display: flex;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .play button {
+        padding: 8px 15px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+
+    /* ---------- SECTIONS ---------- */
+
+    .trending,
+    .continue {
+        padding: 20px 30px;
+    }
+
+    .trending > p,
+    .continue > p {
+        font-size: 16px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+
+    /* ---------- HORIZONTAL MOVIE ROW ---------- */
+
+    .cards,
+    .countcards {
+        display: flex;
+
+        gap: 8px;
+
+        overflow-x: auto;
+        overflow-y: hidden;
+
+        padding: 5px 5px 15px;
+    }
+
+
+    /* ---------- MOVIE CARD ---------- */
+
+    .card,
+    .core {
+        position: relative;
+
+        flex: 0 0 200px;
+
+        height: 120px;
+
+        border-radius: 4px;
+
+        overflow: hidden;
+
+        cursor: pointer;
+
+        transition: transform 0.2s;
+    }
+
+
+    /* ---------- IMAGE ---------- */
+
+    .img,
+    .imge {
+        width: 100%;
+        height: 100%;
+    }
+
+
+    /* ---------- TEXT ON IMAGE ---------- */
+
+    .info {
+        position: absolute;
+
+        bottom: 0;
+        left: 0;
+
+        width: 100%;
+
+        padding: 20px 8px 7px;
+
+        color: white;
+
+        font-size: 11px;
+        font-weight: bold;
+
+        background: linear-gradient(
+            transparent,
+            rgba(0, 0, 0, 0.8)
+        );
+
+        z-index: 2;
+    }
+
+
+    /* ---------- HOVER EFFECT ---------- */
+
+    .card:hover,
+    .core:hover {
+        transform: scale(1.05);
+    }
+
+
+    /* ---------- TRENDING COLORS ---------- */
+
+    .img1 {
+        background: #f05b72;
+    }
+
+    .img2 {
+        background: #38a9d5;
+    }
+
+    .img3 {
+        background: #f4d03f;
+    }
+
+    .img4 {
+        background: #35a9e0;
+    }
+
+    .img5 {
+        background: #d85bb5;
+    }
+
+
+    /* ---------- CONTINUE WATCHING COLORS ---------- */
+
+    .imge1 {
+        background: #f4d03f;
+    }
+
+    .imge2 {
+        background: #f05b72;
+    }
+
+    .imge3 {
+        background: #b68be8;
+    }
+
+    .imge4 {
+        background: #ef645e;
+    }
+
+    .imge5 {
+        background: #31505d;
+    }
+
+
+    /* ---------- TABLET ---------- */
+
+    @media (min-width: 600px) and (max-width: 1199px) {
+
+        .card,
+        .core {
+            flex-basis: 150px;
+            height: 100px;
+        }
+
+        .midnight {
+            min-height: 280px;
+        }
+
+        .midnight h1 {
+            font-size: 28px;
+        }
+
+    }
+
+
+    /* ---------- MOBILE ---------- */
+
+    @media (max-width: 599px) {
+
+        .midnight {
+            min-height: 300px;
+            padding: 30px 20px;
+        }
+
+        .midnight h1 {
+            font-size: 24px;
+        }
+
+        .midnight p {
+            font-size: 13px;
+        }
+
+        .play {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .card,
+        .core {
+            flex-basis: 110px;
+            height: 80px;
+        }
+
+        .trending,
+        .continue {
+            padding: 15px 20px;
+        }
+
+        .info {
+            font-size: 9px;
+        }
+
+    }
+    </style>
+</head>
+<body>
+    <div class="midnight">
+        <h1>Midnight</h1>
+        <p>Midnight is the time when the clock strikes twelve at night.
+            It marks the transition from one day to the next and is often associated with darkness, mystery, and the unknown. Many cultures have different beliefs and traditions surrounding midnight, making it a fascinating and significant moment in time.</p>
+        <div class="play"><button type="submit">Play</button>
+            <div class="more"><p>more info</p></div>
+
+
+    </div>
+    </div>
+    <div class="trending">
+        <p>Trending Now</p>
+        <div class="cards">
+        <div class="card card1">
+            <div class="img img1"></div>
+            <div class="info">neon drift</div>
+        </div>
+        <div class="card card2">
+            <div class="img img2"></div>
+            <div class="info">another movie</div>
+        </div>
+        <div class="card card3">
+            <div class="img img3"></div>
+            <div class="info">movie 3</div>
+            </div>
+        <div class="card card4">
+            <div class="img img4"></div>
+            <div class="info">movie 4</div>
+        </div>
+        <div class="card card5">
+            <div class="img img5"></div>
+            <div class="info">movie 5</div>
+        </div>
+        <div class="card card6">
+            <div class="img img1"></div>
+            <div class="info">movie 6</div>
+        </div>
+        <div class="card card7">
+            <div class="img img2"></div>
+            <div class="info">movie 7</div>
+        </div>
+        <div class="card card8">
+            <div class="img img3"></div>
+            <div class="info">movie 8</div>
+        </div>
+        <div class="card card9">
+            <div class="img img4"></div>
+            <div class="info">movie 9</div>
+        </div>
+        <div class="card card10">
+            <div class="img img5"></div>
+            <div class="info">movie 10</div>
+        </div>
+    </div>
+    <div class="continue">
+        <p>Continue Watching</p>
+        <div class="countcards">
+        <div class="core core1">
+            <div class="imge imge1"></div>
+            <div class="info">movie 1</div>
+        </div>
+        <div class="core core2">
+            <div class="imge imge2"></div>
+            <div class="info">movie 2</div>
+        </div>
+        <div class="core core3">
+            <div class="imge imge3"></div>
+            <div class="info">movie 3</div>
+        </div>
+        <div class="core core4">
+            <div class="imge imge4"></div>
+            <div class="info">movie 4</div>
+        </div>
+        <div class="core core5">
+            <div class="imge imge5"></div>
+            <div class="info">movie 5</div>
+        </div>
+        </div>
+    </div>
+
+</body>
+</html>

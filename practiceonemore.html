@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gla</title>
+    <style>
+        body{
+            background-color: white;
+            padding:0px;
+            margin:0px;
+            color:grey;
+        }
+        .layout{
+            display:flex;
+            min-height:100vh;
+        }
+        .slayout{
+            flex:1;
+            min-width:0;
+        }
+        .sidebar{
+            flex-direction:column;
+            background-color: maroon;
+            color:white;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .navbar{
+            display:flex;position:sticky;top:0px;align-items:center;justify-content:space-between;gap:20px;
+            padding: 20px 30px;
+        }
+        .logo{
+            flex-shrink:0;
+            margin:0;
+            color:green;
+        }
+        .navlinks a{
+            text-decoration:none;
+            color:grey;
+            margin-right:20px;
+        }
+        .navlinks a:hover{
+            color:blue;
+        }
+        .register{
+            flex-shrink:0;
+            color:blue;
+        }
+        .register:hover{
+            transform: scale(1.1);
+        }
+        .tech{
+            display:flex;
+            flex-direction:column;
+            align-items:center;
+            justify-content:center;
+            height:250px;
+            background-color: cyan;
+        }
+        .cards{
+            display:flex;
+            gap:20px;
+            overflow-y:hidden;
+            overflow-x:auto;
+            padding:20px 30px;
+            scroll-behavior: smooth;
+        }
+        .card{
+            position:relative;
+            overflow:hidden;
+            gap:20px;
+            color:white;
+            flex: 0 0 300px;
+        }
+        .card1{
+            background-color: red;
+        }
+        .card2{
+            background-color: green;
+        }
+        .card3{
+            background-color: blue;
+        }
+        .card4{
+            background-color: yellow;
+        }
+        .card5{
+            background-color: orange;
+        }
+        .card6{
+            background-color: purple;
+        }
+        .card7{
+            background-color: pink;
+        }
+        .info{
+            padding:10px 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="layout">
+    <div class="sidebar">
+        <p>Sidebar Content</p>
+        <div class="logo">GLA UNIVERSITY</div>
+        <p>Additional Sidebar Content</p>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        <div class="register">
+            <button>Register</button>
+        </div>
+    </div>
+    <div class="slayout">
+    <div class="navbar">
+        <div class="logo">GLA UNIVERSITY</div>
+        <div class="navlinks">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </div>
+        <div class="register">
+            <button>Register</button>
+        </div>
+    </div>
+    <div class="tech">
+        <h1>TECH SUMMIT 2026</h1>
+        <h2>Welcome to the Tech Summit 2026!</h2>
+        <button>Register Now</button>
+    </div>
+    <div class="cards">
+        <div class="card card1">
+            <div class="img1">
+            </div>
+            <div class="info">
+                <h3>Card 1</h3>
+                <p>This is a description for card 1.</p>
+            </div>
+        </div>
+        <div class="card card2">
+            <div class="img2">
+            </div>
+            <div class="info">
+                <h3>Card 2</h3>
+                <p>This is a description for card 2.</p>
+            </div>
+        </div>
+        <div class="card card3">
+            <div class="img3">
+            </div>
+            <div class="info">
+                <h3>Card 3</h3>
+                <p>This is a description for card 3.</p>
+            </div>
+        </div>
+        <div class="card card4">
+            <div class="img4">
+            </div>
+            <div class="info">
+                <h3>Card 4</h3>
+                <p>This is a description for card 4.</p>
+            </div>
+        </div>
+        <div class="card card5">
+            <div class="img5">
+            </div>
+            <div class="info">
+                <h3>Card 5</h3>
+                <p>This is a description for card 5.</p>
+            </div>
+        </div>
+        <div class="card card6">
+            <div class="img6">
+            </div>
+            <div class="info">
+                <h3>Card 6</h3>
+                <p>This is a description for card 6.</p>
+            </div>
+        </div>
+        <div class="card card7">
+            <div class="img7">
+            </div>
+            <div class="info">
+                <h3>Card 7</h3>
+                <p>This is a description for card 7.</p>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+</body>
+</html>
+

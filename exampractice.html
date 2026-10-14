@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        body{
+            margin:0;
+            padding:0;
+            font-style: italic;
+            overflow-x:hidden;
+        }
+        .navbar{
+            display:flex;
+            position:sticky;
+            top:0;
+            align-items:center;
+            justify-content:space-between;
+            gap:20px;
+            padding:20px 30px;
+            background-color: gainsboro;
+        }
+        .logo{
+            flex-shrink:0;
+            margin:0;
+            color:red;
+        }
+        .search-bar{
+            flex:1;
+            display:flex;
+            justify-content:center;
+        }
+        .search-bar input{
+            width:100%;
+            max-width:400px;
+            padding:10px 15px;
+            border-radius:5px;
+            border:none;
+            outline:none;
+        }
+        .search-bar input::placeholder{
+            color:#999;
+        }
+        .nav-items{
+            display:flex;
+            gap:15px;
+        }
+        .gallery{
+            display:grid;
+            grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+            grid-auto-rows:8px;
+            gap:20px;
+            padding:20px 30px;
+        }
+        .card{
+            display:flex;
+            flex-direction:column;
+            background-color:#fff;
+        }
+        .card1{
+            grid-row:span 20;
+        }
+        .card2{
+            grid-row:span 26;
+        }
+        .card3{
+            grid-row:span 15;
+        }
+        .card4{
+            grid-row:span 10;
+        }
+        .card5{
+            grid-row:span 12;
+        }
+        .img1 {
+    flex: 1;
+    background: #dda0a5;
+    border-radius: 8px;
+}
+
+.img2 {
+    flex: 1;
+    background: #71c9d9;
+    border-radius: 8px;
+}
+.img3{
+    flex:1;
+    background:yellow;
+    border-radius:8px;
+}
+.img4{
+    flex:1;
+    background:green;
+    border-radius:8px;
+}
+.img5{
+    flex:1;
+    background:blue;
+    border-radius:8px;
+}
+        @media (max-width: 1200px){
+            .gallery{
+                grid-template-columns:repeat(5,1fr);
+            }
+        }
+        @media (max-width: 992px){
+            .gallery{
+                grid-template-columns:repeat(3,1fr);
+            }
+            .search-bar{
+                width:220px;
+            }
+        }
+        @media (max-width: 768px){
+            .gallery{
+                grid-template-columns:repeat(2,1fr);
+            }
+            .search-bar{
+                width:150px;
+            }
+            .logo{
+                font-size:14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo"><h1>Tilepress</h1></div>
+        <div class="search-bar">
+            <input type="text" placeholder="search items"/>
+        </div>
+        <div class="nav-items">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </div>
+    </div>
+    <div class="gallery">
+        <div class="card card1">
+            <div class="img1">
+            </div>
+            <div class="info">
+                <h2>Card Title 1</h2>
+                <p>This is a description for card 1.</p>
+            </div>
+        </div>
+        <div class="card card2">
+            <div class="img2">
+            </div>
+            <div class="info">
+                <h2>Card Title 2</h2>
+                <p>This is a description for card 2.</p>
+            </div>
+        </div>
+        <div class="card card3">
+            <div class="img3">
+            </div>
+            <div class="info">
+                <h2>Card Title 3</h2>
+                <p>This is a description for card 3.</p>
+            </div>
+        </div>
+        <div class="card card4">
+            <div class="img4">
+            </div>
+            <div class="info">
+                <h2>Card Title 4</h2>
+                <p>This is a description for card 4.</p>
+            </div>
+        </div>
+        <div class="card card5">
+            <div class="img5">
+            </div>
+            <div class="info">
+                <h2>Card Title 5</h2>
+                <p>This is a description for card 5.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

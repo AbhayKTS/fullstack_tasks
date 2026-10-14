@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <style>
+        /* Write CSS here */
+body{
+margin:0;
+background-color:white;
+color:black;
+}
+.navbar{
+display:flex;
+position:sticky;
+top:0;
+align-items:center;
+justify-content:space-between;
+padding: 20px 30px;
+background-color:grey;
+}
+.logo{
+flex-shrink:0;
+color:red;
+font-size:22px;
+}
+.spacebar{
+display:flex;
+flex:1;
+justify-content:center;
+}
+.spacebar input{
+border-color:red;
+}
+.navitem{
+display:flex;
+gap:15px;
+align-items:center;
+}
+.gallery{
+display:grid;
+grid-template-columns:repeat(5,minmax(200px,1fr));
+grid-auto-rows:5px;
+gap:12px;
+padding:10px 30px 30px;
+}
+.card{
+display:flex;
+flex-direction:column;
+min-width:0;
+overflow:hidden;
+}
+.imag{
+flex:1;
+}
+.title{
+margin:7px 2px 4px;
+}
+.one{
+background:linear-gradient(132deg,blue,aliceblue);
+}
+.card1{
+grid-row:span 32;
+}
+.card2{
+grid-row:span 30;
+}
+.card3{
+grid-row:span 45;
+}
+.card4{
+grid-row:span 40;
+}
+.card5{
+grid-row:span 50;
+}
+.card6{
+grid-row:span 47;
+}
+    </style>
+</head>
+
+<body>
+
+    <!-- Write HTML here -->
+<div class="navbar">
+<div class="logo">Tilepress</div>
+<div class="spacebar">
+<input type="text" placeholder="search here">
+</div>
+<div class="navitem">
+<span class="item">noti</span>
+<span class="item">mess</span>
+<span class="item">prof</span>
+</div>
+</div>
+<div class="gallery">
+<div class="card card1">
+<div class="imag one"></div>
+<div class="title">ancient</div>
+</div>
+<div class="card card2">
+<div class="imag one"></div>
+<div class="title">modern</div>
+</div>
+<div class="card card3">
+<div class="imag one"></div>
+<div class="title">modern</div>
+</div>
+<div class="card card4">
+<div class="imag one"></div>
+<div class="title">modern</div>
+</div>
+<div class="card card5">
+<div class="imag one"></div>
+<div class="title">modern</div>
+</div>
+<div class="card card6">
+<div class="imag one"></div>
+<div class="title">modern</div>
+</div>
+</div>
+
+</body>
+
+</html>
