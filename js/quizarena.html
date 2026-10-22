@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>QuizArena</title>
+        <style>
+            :root {
+                --bg: #0f172a;
+                --panel: #111827;
+                --panel-alt: #1f2937;
+                --primary: #8b5cf6;
+                --primary-dark: #7c3aed;
+            }
+
+            body {
+                align-items: flex-start;
+                padding-top: 4vh;
+            }
+
+            .app {
+                margin-top: -8px;
+            }
+
+            .meta {
+                display: flex;
+                flex-direction: column;
+                align-items: stretch;
+                gap: 0.7rem;
+            }
+
+            .progress {
+                width: 100%;
+            }
+
+            :root {
+                --accent: #22c55e;
+                --accent: #22c55e;
+                --text: #e5e7eb;
+                --muted: #9ca3af;
+                --danger: #ef4444;
+                --warning: #f59e0b;
+                --shadow: rgba(15, 23, 42, 0.35);
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                font-family: Arial, Helvetica, sans-serif;
+                background: linear-gradient(135deg, #0f172a 0%, #111827 100%);
+                color: var(--text);
+                min-height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .app {
+                width: min(900px, 92vw);
+                background: rgba(17, 24, 39, 0.92);
+                border: 1px solid rgba(148, 163, 184, 0.25);
+                border-radius: 20px;
+                box-shadow: 0 25px 60px var(--shadow);
+                overflow: hidden;
+            }
+
+            .topbar {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 1rem 1.5rem;
+                background: rgba(31, 41, 55, 0.9);
+                border-bottom: 1px solid rgba(148, 163, 184, 0.15);
+            }
+
+            .brand {
+                font-size: 1.4rem;
+                font-weight: 700;
+                letter-spacing: 0.04em;
+            }
+
+            .score {
+                display: flex;
+                gap: 0.75rem;
+                flex-wrap: wrap;
+            }
+
+            .pill {
+                display: inline-flex;
+                align-items: center;
+                gap: 0.35rem;
+                padding: 0.45rem 0.8rem;
+                border-radius: 12px;
+                background: rgba(139, 92, 246, 0.15);
+                color: var(--text);
+                font-size: 0.9rem;
+            }
+
+            .content {
+                padding: 1.5rem;
+            }
+
+            .quiz-card {
+                background: var(--panel-alt);
+                border: 1px solid rgba(148, 163, 184, 0.15);
+                border-radius: 18px;
+                padding: 1.5rem;
+            }
+
+            .meta {
+                display: flex;
+                justify-content: space-between;
+                gap: 1rem;
+                align-items: center;
+                margin-bottom: 1rem;
+                color: var(--muted);
+                font-size: 0.95rem;
+            }
+
+            .progress {
+                flex: 1;
+                height: 10px;
+                background: rgba(148, 163, 184, 0.2);
+                border-radius: 999px;
+                overflow: hidden;
+            }
+
+            .progress-bar {
+                display: block;
+                width: 0%;
+                height: 100%;
+                background: linear-gradient(90deg, var(--primary), #a78bfa);
+                border-radius: inherit;
+                transition: width 0.25s ease;
+            }
+
+            .question {
+                font-size: clamp(1.3rem, 2vw, 2rem);
+                line-height: 1.4;
+                margin: 1.25rem 0 1.5rem;
+            }
+
+            .answers {
+                display: grid;
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 1rem;
+            }
+
+            .answer {
+                appearance: none;
+                border: 1px solid rgba(148, 163, 184, 0.2);
+                background: rgba(15, 23, 42, 0.8);
+                color: var(--text);
+                border-radius: 14px;
+                padding: 1rem 1rem;
+                cursor: pointer;
+                font-size: 1rem;
+                text-align: left;
+                transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease;
+            }
+
+            .answer:hover {
+                transform: translateY(-1px);
+                border-color: rgba(139, 92, 246, 0.75);
+            }
+
+            .answer.selected {
+                background: rgba(139, 92, 246, 0.14);
+                border-color: var(--primary);
+            }
+
+            .answer.correct {
+                background: rgba(34, 197, 94, 0.15);
+                border-color: var(--accent);
+            }
+
+            .answer.incorrect {
+                background: rgba(239, 68, 68, 0.12);
+                border-color: var(--danger);
+            }
+
+            .controls {
+                display: flex;
+                justify-content: space-between;
+                gap: 1rem;
+                margin-top: 1.5rem;
+                flex-wrap: wrap;
+            }
+
+            .btn {
+                appearance: none;
+                border: none;
+                border-radius: 12px;
+                padding: 0.9rem 1.2rem;
+                font-size: 1rem;
+                font-weight: 600;
+                cursor: pointer;
+                transition: opacity 0.2s ease, transform 0.2s ease;
+            }
+
+            .btn:hover {
+                transform: translateY(-1px);
+            }
+
+            .btn:disabled {
+                opacity: 0.5;
+                cursor: not-allowed;
+                transform: none;
+            }
+
+            .btn.primary {
+                background: var(--primary);
+                color: white;
+            }
+
+            .btn.primary:hover {
+                background: var(--primary-dark);
+            }
+
+            .btn.secondary {
+                background: rgba(148, 163, 184, 0.12);
+                color: var(--text);
+                border: 1px solid rgba(148, 163, 184, 0.15);
+            }
+
+            .result {
+                display: none;
+                margin-top: 1.5rem;
+                padding: 1.1rem 1.25rem;
+                border-radius: 14px;
+                background: rgba(34, 197, 94, 0.12);
+                border: 1px solid rgba(34, 197, 94, 0.25);
+                color: #dcfce7;
+            }
+
+            .result.show {
+                display: block;
+            }
+
+            .review {
+                display: none;
+                margin-top: 1.5rem;
+                padding: 1rem 1.25rem;
+                border-radius: 14px;
+                background: rgba(15, 23, 42, 0.75);
+                border: 1px solid rgba(148, 163, 184, 0.2);
+            }
+
+            .review.show {
+                display: block;
+            }
+
+            .review-item {
+                padding: 0.9rem 1rem;
+                border-radius: 12px;
+                margin-bottom: 0.75rem;
+                border: 1px solid rgba(148, 163, 184, 0.2);
+                background: rgba(31, 41, 55, 0.65);
+            }
+
+            .review-item.correct {
+                border-color: rgba(34, 197, 94, 0.45);
+            }
+
+            .review-item.incorrect {
+                border-color: rgba(239, 68, 68, 0.45);
+            }
+
+            .review-item h4 {
+                margin: 0 0 0.5rem;
+                font-size: 1rem;
+            }
+
+            .review-item p {
+                margin: 0.2rem 0;
+                color: var(--text);
+                line-height: 1.5;
+            }
+
+            @media (max-width: 640px) {
+                .answers {
+                    grid-template-columns: 1fr;
+                }
+
+                .topbar,
+                .meta,
+                .controls {
+                    flex-direction: column;
+                    align-items: stretch;
+                }
+
+                .score {
+                    justify-content: space-between;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="app">
+            <header class="topbar">
+                <div class="brand">QuizArena</div>
+                <div class="score">
+                    <span class="pill">Score: <strong id="score">0</strong></span>
+                    <span class="pill">Question: <strong id="question-number">1/1</strong></span>
+                </div>
+            </header>
+
+            <main class="content">
+                <section class="quiz-card">
+                    <div class="meta">
+                        <span id="category">General Knowledge</span>
+                        <div class="progress" aria-label="quiz progress">
+                            <span id="progress-bar" class="progress-bar"></span>
+                        </div>
+                    </div>
+
+                    <div id="question" class="question">
+                        Loading question...
+                    </div>
+
+                    <div id="answers" class="answers" aria-live="polite"></div>
+
+                    <div class="controls">
+                        <button id="next-btn" class="btn primary" type="button" disabled>Next Question</button>
+                        <button id="restart-btn" class="btn secondary" type="button" hidden>Restart Quiz</button>
+                    </div>
+
+                    <div id="result" class="result" aria-live="polite"></div>
+                    <div id="review" class="review" aria-live="polite"></div>
+                </section>
+            </main>
+        </div>
+
+        <script src="./quizarena.js" defer></script>
+    </body>
+</html>
