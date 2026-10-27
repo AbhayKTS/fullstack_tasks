@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissors</title>
+    <script>
+        //write the code here also include that whoever has 5 win wins the game and display the winner in the result paragraph
+        let playerScore = 0;
+        let computerScore = 0;
+        function playGame(playerChoice) {
+                const choices = ["rBtn", "pBtn", "sBtn"];
+                const computerChoice = choices[Math.floor(Math.random() * choices.length)];
+                if (playerChoice === computerChoice) {
+                    result.textContent = `It's a tie! You both chose ${playerChoice}.`;
+                } else if (
+                    (playerChoice === "rBtn" && computerChoice === "sBtn") ||
+                    (playerChoice === "pBtn" && computerChoice === "rBtn") ||
+                    (playerChoice === "sBtn" && computerChoice === "pBtn")
+                ) {
+                    playerScore++;
+                    result.textContent = `You win! ${playerChoice} beats ${computerChoice}. Score: You ${playerScore} - Computer ${computerScore}`;
+                } else {
+                    computerScore++;
+                    result.textContent = `You lose! ${computerChoice} beats ${playerChoice}. Score: You ${playerScore} - Computer ${computerScore}`;
+                }
+                if (playerScore === 5) {
+                    result.textContent = "Congratulations! You won the game!";
+                    resetGame();
+                } else if (computerScore === 5) {
+                    result.textContent = "Sorry! The computer won the game!";
+                    resetGame();
+                }
+            }
+        function resetGame() {
+            playerScore = 0;
+            computerScore = 0;
+        }
+    </script>
+  </head>
+  <body>
+    <h1>Rock Paper Scissors</h1>
+    <p>Choose your move:</p>
+    <button onclick="playGame('rBtn')" id="rBtn">Rock</button>
+    <button onclick="playGame('pBtn')" id="pBtn">Paper</button>
+    <button onclick="playGame('sBtn')" id="sBtn">Scissors</button>
+    <p id="result"></p>
+  </body>
+</html>
