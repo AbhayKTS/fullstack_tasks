@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Memory Card Match</title>
+  </head>
+  <body>
+    <h1>5. Memory Card Match</h1>
+
+    <p>A 4x4 grid of face-down cards with 8 pairs, flipped two at a time.</p>
+    <p>Matches stay open, and mismatches flip back after 1 second.</p>
+
+    <div id="gameBoard" aria-label="Memory card board"></div>
+
+    <button id="resetBtn" type="button">Reset Game</button>
+    <p id="status" aria-live="polite"></p>
+
+    <p>Practice: array shuffle, nested state with let, closures for the "first card" tracking, and locking clicks while cards flip back.</p>
+
+    <script src="memorycard.js"></script>
+  </body>
+</html>
