@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Whack-a-Mole</title>
+</head>
+<body>
+  <h2>3. Whack-a-Mole (Whack-a-Wicket)</h2>
+  <p>Score: <span id="score">0</span></p>
+  <p>Time: <span id="time">30</span> seconds</p>
+  <button id="startBtn">Start Game</button>
+  <div id="grid" style="display: grid; grid-template-columns: repeat(3, 60px); gap: 5px; margin-top: 20px;">
+    <div class="cell" data-index="0"></div>
+    <div class="cell" data-index="1"></div>
+    <div class="cell" data-index="2"></div>
+    <div class="cell" data-index="3"></div>
+    <div class="cell" data-index="4"></div>
+    <div class="cell" data-index="5"></div>
+    <div class="cell" data-index="6"></div>
+    <div class="cell" data-index="7"></div>
+    <div class="cell" data-index="8"></div>
+  </div>
+  <p id="message"></p>
+  <script>
+    const cells = document.querySelectorAll('.cell');
+    const scoreDisplay = document.getElementById('score');
+    const timeDisplay = document.getElementById('time');
+    const startBtn = document.getElementById('startBtn');
+    const message = document.getElementById('message');
+    const grid = document.getElementById('grid');
+    let score = 0;
+    let timeLeft = 30;
+    let activeCell = null;
+    let moleTimer = null;
+    let countdownTimer = null;
+    let gameRunning = false;
+    function clearMole() {
+      if (activeCell) {
+        activeCell.textContent = '';
+        activeCell.classList.remove('mole');
+        activeCell = null;
+      }
+    }
+    function chooseRandomCell() {
+      const randomIndex = Math.floor(Math.random() * cells.length);
+      const newCell = cells[randomIndex];
+      clearMole();
+      activeCell = newCell;
+      activeCell.textContent = 'M';
+      activeCell.classList.add('mole');
+    }
+    function updateScore() {
+      scoreDisplay.textContent = score;
+    }
+    function updateTime() {
+      timeDisplay.textContent = timeLeft;
+    }
+    function endGame() {
+      clearInterval(moleTimer);
+      clearInterval(countdownTimer);
+      gameRunning = false;
+      clearMole();
+      message.textContent = 'Time up! Your score is ' + score;
+      startBtn.disabled = false;
+    }
+    function startGame() {
+      clearInterval(moleTimer);
+      clearInterval(countdownTimer);
+      clearMole();
+      score = 0;
+      timeLeft = 30;
+      message.textContent = '';
+      updateScore();
+      updateTime();
+      gameRunning = true;
+      startBtn.disabled = true;
+      moleTimer = setInterval(chooseRandomCell, 800);
+      countdownTimer = setInterval(function () {
+        timeLeft--;
+        updateTime();
+        if (timeLeft <= 0) {
+          endGame();
+        }
+      }, 1000);
+    }
+    startBtn.addEventListener('click', startGame);
+    grid.addEventListener('click', function (event) {
+      const clickedCell = event.target;
+      if (!gameRunning) {
+        return;
+      }
+      if (clickedCell.classList.contains('mole')) {
+        score += 1;
+        updateScore();
+        clickedCell.textContent = '';
+        clickedCell.classList.remove('mole');
+        activeCell = null;
+      }
+    });
+  </script>
+</body>
+</html>
